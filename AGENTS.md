@@ -36,12 +36,17 @@ At the repository root:
 
 - `plugin.json` — the Agent Plugins 1.0 manifest (Codex, Copilot CLI).
 - `.claude-plugin/plugin.json` — Claude Code plugin manifest.
-- `.claude-plugin/marketplace.json` — single-repo marketplace entry. Both
-  Claude Code and Copilot CLI read this same file, so the repository is its own
-  marketplace for each of them (`/plugin marketplace add vit-panchuk/esf` and
-  `copilot plugin marketplace add vit-panchuk/esf`). Copilot has deprecated
-  installing directly from a repository, which makes this file the supported route
-  rather than a convenience.
+- `.claude-plugin/marketplace.json` — single-repo marketplace entry for Claude
+  Code and Copilot CLI, which read the same file and the same schema. Copilot
+  has deprecated installing directly from a repository, so this file is the
+  supported route rather than a convenience.
+- `.agents/plugins/marketplace.json` — the same idea for Codex, which looks in
+  a different place and uses a different schema (`interface.displayName`, and a
+  `source` object with `policy` and `category`). Two catalogs, one plugin:
+  every harness installs the package at the repository root.
+
+  Keep them in step. A plugin renamed or a version bumped in one catalog and
+  not the other gives two harnesses different answers about the same release.
 - `agents/openai.yaml` — display metadata for the OpenAI interface.
 - `README.md` — for humans: what this is, one install snippet per harness, and
   the version history.

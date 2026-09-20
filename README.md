@@ -47,30 +47,27 @@ will be supported in a future release.)
 
 ### Codex
 
-Codex reads the same [Agent Plugins 1.0](https://agent-plugins.org) manifest
-this repository ships — `plugin.json` at the root, skills under `skills/` — so
-the package needs nothing extra. What Codex does not offer is a per-user way to
-point at an arbitrary repository: unlike Claude Code and Copilot, there is no
-`marketplace add` command. Three routes, depending on where you are:
+```bash
+codex plugin marketplace add vit-panchuk/esf
+codex plugin install esf@esf
+```
 
-**In a workspace with an admin.** An admin imports this repository as a private
-marketplace under **Admin → Plugins → Add → Import marketplace**, giving the
-repository URL and optionally a path and a branch, tag or commit. Public and
-private repositories are both supported, and imported marketplaces sync daily.
-Members then install it from `/plugins` like any other.
+Codex keeps its catalog at `.agents/plugins/marketplace.json` rather than the
+`.claude-plugin/marketplace.json` the other two read, so this repository ships
+both. The plugin itself is the same package for all three — `plugin.json` at
+the root, skills under `skills/`, per
+[Agent Plugins 1.0](https://agent-plugins.org).
 
-**From the shared directory.** Once the plugin is listed in the public
-ChatGPT/Codex directory, run `/plugins` in a Codex session, find **esf**, and
-install it.
+Start a new session after installing: bundled skills only become available in a
+session opened afterwards. Invoke it by mentioning the skill
+(`$engineering-strategy-framework`) or by describing the task and letting Codex
+route to it.
 
-**On your own machine, today.** Use the Skills CLI at the top of this page. It
-installs the skill itself, without the plugin layer, and works before any
-listing exists.
-
-Whichever route, start a new session after installing — bundled skills only
-become available in a session opened afterwards. Invoke it by mentioning the
-skill (`$engineering-strategy-framework`) or by describing the task and letting
-Codex route to it.
+Two other routes exist if that one does not fit. A workspace admin can import
+this repository for everyone under **Admin → Plugins → Add → Import
+marketplace** (public and private repositories, synced daily). And once the
+plugin is listed in the shared ChatGPT/Codex directory, `/plugins` in a session
+will find it without any marketplace being added.
 
 ### Manual
 
