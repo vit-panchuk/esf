@@ -1,4 +1,5 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "esf",
   "description": "An operating contract for engineering strategy — reduce risk, compound delivery-machine improvements, and maximize the probability of product success under uncertainty. Modes: greenfield initiative, existing-system audit, single decision.",
   "version": "0.7.0",

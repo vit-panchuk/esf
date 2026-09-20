@@ -43,13 +43,17 @@ The runtime artifact is `SKILL.md`, so any harness can use it directly — clone
 the repository wherever that harness looks for skills:
 
 ```bash
-git clone https://github.com/vit-panchuk/esf.git \
-  ~/.claude/skills/engineering-strategy-framework
+git clone https://github.com/vit-panchuk/esf.git ~/src/esf
+ln -s ~/src/esf/skills/engineering-strategy-framework ~/.claude/skills/
 ```
 
-For claude.ai and the API, zip the directory and upload it.
+Point any harness that takes a skills directory at `~/src/esf/skills`. For
+claude.ai and the API, zip `skills/engineering-strategy-framework` and upload
+it.
 
 ## What is in here
+
+The plugin carries one skill, at `skills/engineering-strategy-framework/`:
 
 | File | What it is |
 |---|---|
@@ -57,7 +61,11 @@ For claude.ai and the API, zip the directory and upload it.
 | `HARNESS-ENGINEERING.md` | The repository-side playbook: auditing the machine a team and its agents work in, and routing the findings into the registers. |
 | `DSL.md` | The typed vocabulary the report pipeline compiles a report into — constructs, graph, channels. Implemented by the [`esf-dsl`](https://github.com/vit-panchuk/esf-dsl) package. |
 | `LINEAGE.md` | Prior art, component by component: what to credit, what to borrow more of, and where this framework genuinely departs. |
-| `examples/` | Complete worked reports — see below. |
+| `examples/` | Complete worked reports, carried inside the skill so a harness running it can open one mid-engagement — see below. |
+
+`plugin.json` at the root is the [Agent Plugins 1.0](https://agent-plugins.org)
+manifest that Codex and Copilot CLI read; `.claude-plugin/` holds the Claude
+Code manifests. All three discover the skill from `skills/`.
 
 ## Worked examples
 

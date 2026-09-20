@@ -2811,7 +2811,7 @@ Phase 4 Strategy Refinement gate + Refinement Toolkit, and Phase 5's
 Policy register with operations as policy fields — completing the
 five-step lifecycle). Remaining unimported: the mandate material
 (/who-does-strategy/ remainder) and the case-study traceability
-reading (see TODO.md).
+reading.
 
 **Bottom line:** a lightweight successor to ATAM/CBAM, with a RAID
 discipline that actually prunes, pre-mortem + red-team baked in, and
@@ -2823,7 +2823,7 @@ practice), and single-analyst (self-red-team is weaker than a room of
 people who disagree).
 
 Full component-by-component lineage and the trade-off detail: see
-[LINEAGE.md](LINEAGE.md). Planned evolution: see [TODO.md](TODO.md).
+[LINEAGE.md](LINEAGE.md).
 
 ------------------------------------------------------------------------
 
