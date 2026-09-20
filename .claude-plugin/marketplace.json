@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "esf",
+  "owner": {
+    "name": "Vitaly Panchuk",
+    "url": "https://github.com/vit-panchuk"
+  },
+  "description": "The Engineering Strategy Framework, installable as a Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "esf",
+      "source": "./",
+      "description": "An operating contract for engineering strategy: reduce risk, compound the delivery machine, and maximize the probability that the right thing gets built under uncertainty.",
+      "license": "MIT",
+      "keywords": [
+        "engineering-strategy",
+        "audit",
+        "risk-register",
+        "decision-log",
+        "evidence",
+        "policy"
+      ]
+    }
+  ]
+}

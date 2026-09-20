@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "esf",
+  "description": "An operating contract for engineering strategy — reduce risk, compound delivery-machine improvements, and maximize the probability of product success under uncertainty. Modes: greenfield initiative, existing-system audit, single decision.",
+  "version": "0.7.0",
+  "author": {
+    "name": "Vitaly Panchuk",
+    "url": "https://vit-panchuk.com"
+  },
+  "homepage": "https://vit-panchuk.com/esf/",
+  "repository": "https://github.com/vit-panchuk/esf",
+  "license": "MIT",
+  "keywords": [
+    "engineering-strategy",
+    "audit",
+    "risk-register",
+    "decision-log",
+    "evidence",
+    "policy",
+    "agent-harness",
+    "esf"
+  ]
+}

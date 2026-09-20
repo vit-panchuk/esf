@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Strategy Framework"
+  short_description: "Audit a system, a team or a decision, and report with evidence"
+  default_prompt: "Use $esf to run an engineering-strategy audit of this system: gather evidence first, tag every claim with where it came from, and report the risks ranked."
