@@ -33,34 +33,44 @@ Omit `--global` for a project-local install a team can commit. Update with
 
 ### Copilot CLI
 
+The repository is its own marketplace, the same way it is for Claude Code —
+both read the same `.claude-plugin/marketplace.json`:
+
 ```bash
 copilot plugin marketplace add vit-panchuk/esf
 copilot plugin install esf@esf
 ```
 
-Installing straight from the repository (`copilot plugin install vit-panchuk/esf`)
-also works today, but GitHub has deprecated direct installs — only
-`plugin@marketplace` will be supported in a future release.
+(`copilot plugin install vit-panchuk/esf` also works today, but GitHub has
+deprecated installing straight from a repository; only `plugin@marketplace`
+will be supported in a future release.)
 
 ### Codex
 
 Codex reads the same [Agent Plugins 1.0](https://agent-plugins.org) manifest
 this repository ships — `plugin.json` at the root, skills under `skills/` — so
-no extra setup is needed on its side. In a Codex session:
+the package needs nothing extra. What Codex does not offer is a per-user way to
+point at an arbitrary repository: unlike Claude Code and Copilot, there is no
+`marketplace add` command. Three routes, depending on where you are:
 
-```
-/plugins
-```
+**In a workspace with an admin.** An admin imports this repository as a private
+marketplace under **Admin → Plugins → Add → Import marketplace**, giving the
+repository URL and optionally a path and a branch, tag or commit. Public and
+private repositories are both supported, and imported marketplaces sync daily.
+Members then install it from `/plugins` like any other.
 
-That opens the plugin browser over the marketplaces Codex knows about. Find
-**esf**, install it, then start a new session — bundled skills only become
-available in a session started after installation. Invoke it by mentioning the
-skill (`$engineering-strategy-framework`) or just describe the task and let
+**From the shared directory.** Once the plugin is listed in the public
+ChatGPT/Codex directory, run `/plugins` in a Codex session, find **esf**, and
+install it.
+
+**On your own machine, today.** Use the Skills CLI at the top of this page. It
+installs the skill itself, without the plugin layer, and works before any
+listing exists.
+
+Whichever route, start a new session after installing — bundled skills only
+become available in a session opened afterwards. Invoke it by mentioning the
+skill (`$engineering-strategy-framework`) or by describing the task and letting
 Codex route to it.
-
-Until the plugin is listed in the shared ChatGPT/Codex directory it will not
-appear in that browser; use the Skills CLI above, which installs from the
-repository directly.
 
 ### Manual
 
