@@ -83,6 +83,21 @@ Point any harness that takes a skills directory at `~/src/esf/skills`. For
 claude.ai and the API, zip `skills/engineering-strategy-framework` and upload
 it.
 
+## The tooling
+
+A report written against this contract can be authored and published by hand.
+It can also be compiled: [**esf-dsl**](https://github.com/vit-panchuk/esf-dsl)
+([npm](https://www.npmjs.com/package/esf-dsl)) is the typed vocabulary those
+reports are written in, and the compiler that turns one source into the web
+page, the markdown, the deck, the JSON-LD and the rest — so the evidence meter
+is counted from the claims rather than written beside them. `DSL.md` inside the
+skill is the framework's view of that language; the package's own `esf dict` is
+the authority.
+
+The two repositories are independent. Follow the framework with no tooling at
+all, or use the language for a report that was never written against this
+contract.
+
 ## What is in here
 
 The plugin carries one skill, at `skills/engineering-strategy-framework/`:
