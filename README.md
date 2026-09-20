@@ -94,6 +94,9 @@ is counted from the claims rather than written beside them. `DSL.md` inside the
 skill is the framework's view of that language; the package's own `esf dict` is
 the authority.
 
+The two published reports below were compiled that way: one source each, out to
+a page, a deck and a Ukrainian edition.
+
 The two repositories are independent. Follow the framework with no tooling at
 all, or use the language for a report that was never written against this
 contract.
@@ -116,18 +119,34 @@ Code manifests. All three discover the skill from `skills/`.
 
 ## Worked examples
 
+Two of the three are live, and go on changing as the engagements do — read them
+published at [vit-panchuk.com/reports](https://vit-panchuk.com/reports/), or
+open the copies carried inside the skill.
+
 - **`oss-audit-solidus.md`** — an existing-system audit run from outside, on a
   public open-source project, unanonymised because all of it is public. Twenty-
   eight revisions under adversarial review, a 43-entry decision log, and the
   policy layer compiled from a zero-mandate position. Its authoring source
   (`.mdx`) and its WIP graph (`.graph.cypher`) ship beside it.
+  Published: [Solidus](https://vit-panchuk.com/reports/solidus/) — rev. 28, 132
+  claims, 99 minutes — with a
+  [38-slide deck](https://vit-panchuk.com/reports/solidus/deck/), a
+  [Ukrainian edition](https://vit-panchuk.com/uk/reports/solidus/), and an essay
+  drawn from it,
+  [The Moneypot Nobody Spends vs the Work Nobody Does](https://vit-panchuk.com/writing/the-moneypot-nobody-spends-vs-the-work-nobody-does/).
 - **`client-audit-saas-erp.md`** — the same mode from the inside: a private
   client, anonymised for publication, where the evidence base is a 27-month chat
   export because the project keeps no tracker. Carries a risk recorded as fired
   between revisions. Authoring source ships beside it.
+  Published: [SaaS ERP](https://vit-panchuk.com/reports/saas-erp/) — rev. 4, 112
+  claims, 61 minutes — with a
+  [21-slide deck](https://vit-panchuk.com/reports/saas-erp/deck/), a
+  [Ukrainian edition](https://vit-panchuk.com/uk/reports/saas-erp/), and an essay
+  drawn from it,
+  [Founder, Start Adopting Your Product Now!](https://vit-panchuk.com/writing/founder-start-adopting-your-product-now/).
 - **`greenfield-telemetry-portal.md`** — a greenfield initiative, fully
   synthetic. The decisive reframe is that the "greenfield" is the producer side
-  of an integration contract already running in production.
+  of an integration contract already running in production. Unpublished.
 
 ## Version history
 
