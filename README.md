@@ -37,6 +37,26 @@ Omit `--global` for a project-local install a team can commit. Update with
 copilot plugin install vit-panchuk/esf
 ```
 
+### Codex
+
+Codex reads the same [Agent Plugins 1.0](https://agent-plugins.org) manifest
+this repository ships — `plugin.json` at the root, skills under `skills/` — so
+no extra setup is needed on its side. In a Codex session:
+
+```
+/plugins
+```
+
+That opens the plugin browser over the marketplaces Codex knows about. Find
+**esf**, install it, then start a new session — bundled skills only become
+available in a session started after installation. Invoke it by mentioning the
+skill (`$engineering-strategy-framework`) or just describe the task and let
+Codex route to it.
+
+Until the plugin is listed in the shared ChatGPT/Codex directory it will not
+appear in that browser; use the Skills CLI above, which installs from the
+repository directly.
+
 ### Manual
 
 The runtime artifact is `SKILL.md`, so any harness can use it directly — clone
