@@ -49,7 +49,7 @@ will be supported in a future release.)
 
 ```bash
 codex plugin marketplace add vit-panchuk/esf
-codex plugin install esf@esf
+codex plugin add esf@esf
 ```
 
 Codex keeps its catalog at `.agents/plugins/marketplace.json` rather than the
