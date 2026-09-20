@@ -34,8 +34,13 @@ Omit `--global` for a project-local install a team can commit. Update with
 ### Copilot CLI
 
 ```bash
-copilot plugin install vit-panchuk/esf
+copilot plugin marketplace add vit-panchuk/esf
+copilot plugin install esf@esf
 ```
+
+Installing straight from the repository (`copilot plugin install vit-panchuk/esf`)
+also works today, but GitHub has deprecated direct installs — only
+`plugin@marketplace` will be supported in a future release.
 
 ### Codex
 

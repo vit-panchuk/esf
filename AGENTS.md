@@ -36,8 +36,12 @@ At the repository root:
 
 - `plugin.json` — the Agent Plugins 1.0 manifest (Codex, Copilot CLI).
 - `.claude-plugin/plugin.json` — Claude Code plugin manifest.
-- `.claude-plugin/marketplace.json` — single-repo marketplace entry, so
-  `/plugin marketplace add vit-panchuk/esf` works.
+- `.claude-plugin/marketplace.json` — single-repo marketplace entry. Both
+  Claude Code and Copilot CLI read this same file, so the repository is its own
+  marketplace for each of them (`/plugin marketplace add vit-panchuk/esf` and
+  `copilot plugin marketplace add vit-panchuk/esf`). Copilot has deprecated
+  installing directly from a repository, which makes this file the supported route
+  rather than a convenience.
 - `agents/openai.yaml` — display metadata for the OpenAI interface.
 - `README.md` — for humans: what this is, one install snippet per harness, and
   the version history.
